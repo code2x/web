@@ -9,7 +9,6 @@ function myMenuFunction() {
     }
 }
 
-
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
 window.onscroll = function () { headerShadow() };
 
@@ -31,7 +30,6 @@ function headerShadow() {
     }
 }
 
-
 /* ----- TYPING EFFECT ----- */
 let typingEffect = new Typed(".typedText", {
     strings: ["Software Engineer", "Programmer", "Data Architect", "Game Developer", "Algorithmic Analyst"],
@@ -40,7 +38,6 @@ let typingEffect = new Typed(".typedText", {
     backSpeed: 80,
     backDelay: 2000
 })
-
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
 const sr = ScrollReveal({
@@ -57,7 +54,6 @@ sr.reveal('.featured-text-info', { delay: 200 })
 sr.reveal('.featured-text-btn', { delay: 200 })
 sr.reveal('.social_icons', { delay: 200 })
 sr.reveal('.featured-image', { delay: 300 })
-
 
 /* -- PROJECT BOX -- */
 sr.reveal('.project-box', { interval: 200 })
@@ -89,10 +85,7 @@ const srRight = ScrollReveal({
 srRight.reveal('.skills-box', { delay: 100 })
 srRight.reveal('.form-control', { delay: 100 })
 
-
-
 /* ----- CHANGE ACTIVE LINK ----- */
-
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
@@ -104,18 +97,15 @@ function scrollActive() {
             sectionId = current.getAttribute('id')
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-
             document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
-
         } else {
-
             document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
-
         }
     })
 }
 
 window.addEventListener('scroll', scrollActive)
+
 function downloadCV() {
     // Replace 'M.Salman%20Resume.pdf' with the actual name of your CV file
     var cvUrl = 'M.Salman%20Resume.pdf';
@@ -146,4 +136,51 @@ function scrollToContact() {
     contactSection.scrollIntoView({ behavior: "smooth" });
 }
 
+// Form Submission Handling
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Display a success message or perform additional actions here
+        alert('Form submitted successfully!');
+    });
+});
+
+function downloadCV() {
+    // Replace 'YOUR_GOOGLE_FORM_URL' with the actual URL of your Google Form
+    var googleFormUrl = 'YOUR_GOOGLE_FORM_URLhttps://docs.google.com/forms/d/e/1FAIpQLSccSifpZ5gn78Rw_UNh7z75kp-JWDqrTpWpED0wSITDwwJvxQ/viewform?usp=sf_link';
+
+    // Open the Google Form link
+    window.open(googleFormUrl, '_blank');
+}
+
+// Form Submission Handling
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Submit the form asynchronously
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+        })
+            .then(response => {
+                // Display a success message or perform additional actions here
+                alert('Form submitted successfully!');
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Error submitting form:', error);
+            });
+    });
+});
+function downloadCV() {
+    // Replace 'YOUR_GOOGLE_FORM_URL' with the actual URL of your Google Form
+    var googleFormUrl = 'YOUR_GOOGLE_FORM_URL';
+
+    // Redirect to the Google Form link
+    window.location.href = googleFormUrl;
+}
 
