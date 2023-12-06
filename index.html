@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Salman's portfolio</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- --------------- HEADER --------------- -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Muhammad Salman</p>
+                <span></span>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <!-- <li class="nav_list">
+                        <a href="#popular" class="nav-link">Popular</a>
+                        <div class="circle"></div>
+                    </li> -->
+
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list ">
+                        <a href="https://www.linkedin.com/in/muhammad-salman-b04905284/" target="_blank">
+                            <img style="height: 20px; width: 20px; position: relative; top: 2px;"
+                                src="Linkedin-logo.png" alt="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn" onclick="downloadCV()">Download CV<i class="uil uil-file-alt"></i></button>
+                        <!-- class="uil uil-file-alt"></i></button> -->
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+
+        <!-- -------------- MAIN ---------------- -->
+        <main class="wrapper">
+            <!-- -------------- FEATURED BOX ---------------- -->
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="featured-text-card">
+                        <span>Muhammad Salman</span>
+                    </div>
+                    <div class="featured-name">
+                        <p>I'm <span class="typedText"></span></p>
+                    </div>
+                    <div class="featured-text-info">
+                        <p>Software Engineer, Front-End Developer, Game Developer and Data Structure and Algortihms
+                            Expert
+
+                            .
+                        </p>
+                    </div>
+                    <div class="featured-text-btn">
+                        <!-- <button class="btn blue-btn">Hire Me</button> -->
+                        <button class="btn blue-btn" onclick="scrollToContact()">Hire Me</button>
+                        <!-- <button class="btn" onclick="alert('The CV is Unavaiable Know')">Download CV <i -->
+                            <!-- <button class="btn" onclick="downloadCV(this)">Download CV</button -->
+                            <button class="btn" onclick="downloadCV()">Download CV<i class="uil uil-file-alt"></i></button>
+                        <!-- class="uil uil-file-alt"></i></button> -->
+                    </div>
+                    <div class="social_icons">
+                        <div class="icon icon">
+                            <a href="https://www.linkedin.com/in/muhammad-salman-b04905284/" target="_blank">
+                                <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="Linkedin-logo.png"
+                                    alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="icon icona">
+                            <a href="https://www.upwork.com/freelancers/~01d4a5caddc73d7e8c" target="_blank">
+                                <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="Upwork-Emblema.png"
+                                    alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="icon icona">
+                            <a href="https://github.com/SalmanDeveloperz"
+                                target="_blank">
+                                <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="github_PNG80.png"
+                                    alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="icon icona">
+                            <a href="https://wa.me//+923377534199"
+                                target="_blank">
+                                <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="whatsapp logo.png"
+                                    alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="icon icon">
+                            <a href="https://www.facebook.com/profile.php?id=61552282109872" target="_blank">
+                                <img style="height: 20px; width: 20px; position: relative; top: 2px;"
+                                    src="facebook-app-symbol.png" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="icon icon">
+                            <a href="https://www.instagram.com/chsalman199/" target="_blank">
+                                <img style="height: 20px; width: 20px; position: relative; top: 2px;"
+                                    src="instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                    
+                        <div class="icon icona">
+                            <a href="www.youtube.com/@IslamEcho" target="_blank">
+                                <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="youtube.png"
+                                    alt="Instagram">
+                            </a>
+                        </div>
+                        
+                       
+
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="IMG-20221224-WA0007.jpg" alt="">
+                    </div>
+                </div>
+                <div class="scroll-icon-box">
+                    <a href="#about" class="scroll-btn">
+                        <i class="uil uil-mouse-alt"></i>
+                        <p>Scroll Down</p>
+                    </a>
+                </div>
+
+            </section>
+            <!-- -------------- ABOUT BOX ---------------- -->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1 style="color:rgb(110, 87, 224);">About Me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <h3>My introduction</h3>
+                            <p>As a flexible professional, I excel in adapting to challenges, fostering creativity, and
+                                embracing feedback. Thriving in dynamic environments, I'm committed to staying current
+                                with industry trends and emerging technologies. Fueled by a passion for problem-solving
+                                and dedication to delivering quality results, I'm enthusiastic about contributing my
+                                skills to exciting projects.
+                            </p>
+                            <div class="about-btn">
+                                <!-- <button class="btn" onclick="alert('The CV is Unavailable Know')">Download CV <i -->
+                                    
+                            <button class="btn" onclick="downloadCV()">Download CV<i class="uil uil-file-alt"></i></button>
+                                        <!-- class="uil uil-import"></i></button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Data Structures and Algorithms</h3>
+                            </div>
+                            <ul class="skills-list">
+                                <li>Advanced Algorithmic Proficiency</li>
+                                <li>Problem-Solving Skills</li>
+                                <li>Dynamic Memory Management</li>
+                                <li>Optimization Techniques</li>
+                                <li>Standard Template Library (STL)</li>
+                                <li>Debugging and Profiling</li>
+                                <li>Game projects</li>
+                                <li>Machine Learning and AI</li>
+                            </ul>
+                        </div>
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Frontend Development</h3>
+                            </div>
+                            <ul class="skills-list">
+                                <li>Advanced JavaScript</li>
+                                <li>Responsive Design</li>
+                                <li>Frontend Testing</li>
+                                <li>API Integration</li>
+                                <li>Web Animation</li>
+                                <li>Collaboration Tools</li>
+                                <li>Project Management</li>
+                            </ul>
+                        </div>
+                        <!-- <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Actor</h3>
+                            </div>
+                            <ul class="skills-list">
+                                <li>Networking</li>
+                                <li>Rehearsal</li>
+                                <li>Performance Skills</li>
+                                <li>Script Analysis</li>
+                                <li>Emotional Depth</li>
+                                <li>Continuous Learning</li>
+                            </ul>
+                        </div> --> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- -------------- PROJECT BOX ----------------
+
+            <section class="section" id="popular">
+                <div class="top-header">
+                    <h1>Popular</h1>
+                </div>
+                <div class="project-container">
+                    <div class="project-box">
+                        <i class="uil uil-instagram"></i>
+                        <h3>Instagram</h3>
+                        <label>15K+ Followers</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-youtube"></i>
+                        <h3>Youtube</h3>
+                        <label>5k+ Subscribers</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-snapchat-alt"></i>
+                        <h3>Snapchat</h3>
+                        <label>10K+ Follwers</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -------------- CONTACT BOX ---------------- -->
+
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Reach Out to Me</h1>
+                    <span>For inquiries, collaboration opportunities, or to discuss any programming-related matter,
+                        please feel free to reach out. I'm here to engage in meaningful conversations and contribute my
+                        expertise</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info">
+                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i>chsalmanramzan422@gmail.com</p>
+                            <p><i class="uil uil-phone"></i> +92 337 7534199</p>
+
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <form action="https://forms.gle/y8rwgGpwayBnQxWp7" method="POST">
+                            <div class="form-inputs">
+                                <input type="text" name="entry.123456789" class="input-field" placeholder="Name">
+                                <input type="text" name="entry.987654321" class="input-field" placeholder="Email">
+                            </div>
+                            <div class="text-area">
+                                <textarea name="entry.abcdefghijklmnopqrstuvwxyz" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="col">
+                        <div class="form-control">
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" placeholder="Name">
+                                <input type="text" class="input-field" placeholder="Email">
+                            </div>
+                            <div class="text-area">
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                    <!-- <form action="https://forms.gle/3hRa1JjYpuP6s3AN6" method="POST">
+                        <input type="text" name="entry.1450902841" placeholder="Name" required>
+                        <input type="email" name="entry.731720720" placeholder="Email" required>
+                        <textarea name="entry.536984012" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                    </form> 
+
+
+                    <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST">
+                        
+                        <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                    </form> -->
+                    
+
+                    <!-- <form action="copied-form-url" method="POST">
+                        <div class="col">
+                            <div class="form-control">
+                                <div class="form-inputs">
+                                    <input type="text" class="input-field" placeholder="Name">
+                                    <input type="text" class="input-field" placeholder="Email">
+                                </div>
+                                <div class="text-area">
+                                    <textarea placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-button">
+                                    <button class="btn">Send <i class="uil uil-message"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                    </form> -->
+
+
+                    
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- --------------- FOOTER --------------- -->
+        <footer>
+            <div class="top-footer">
+                <p>Muhammad Salman.</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#projects">Popular</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <div class="iconb">
+                    <a href="https://instagram.com/mirza_mahad12?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                        <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="instagram.png"
+                            alt="Instagram">
+                    </a>
+                </div>
+                <div class="iconb">
+                    <a href="https://www.threads.net/@mirza_mahad12" target="_blank">
+                        <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="threads.png"
+                            alt="Instagram">
+                    </a>
+                </div>
+                <div class="iconb">
+                    <a href="https://www.facebook.com/mahad.miza?mibextid=ZbWKwL" target="_blank">
+                        <img style="height: 20px; width: 20px; position: relative; top: 2px;"
+                            src="facebook-app-symbol.png" alt="Instagram">
+                    </a>
+                </div>
+                <div class="iconb">
+                    <a href="https://youtube.com/@mahadmirza0?si=MXjOcakmSknqsltY" target="_blank">
+                        <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="youtube.png"
+                            alt="Instagram">
+                    </a>
+                </div>
+                <div class="iconb">
+                    <a href="https://www.tiktok.com/@mahadmirza21" target="_blank">
+                        <img style="height: 20px; width: 20px; position: relative; top: 2px;" src="tik-tok.png"
+                            alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Muhammad Salman</a> - All rights reserved
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="main.js"></script>
+</body>
+
+</html>
