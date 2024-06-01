@@ -1,1 +1,1 @@
-First podtfolio made in 2023 Summer vocations with Frontend skills
+First portfolio Website made in 2023 Summer vocations with Frontend skills
