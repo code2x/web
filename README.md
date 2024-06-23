@@ -1,4 +1,4 @@
-# Muhammad Salman's Portfolio
+# Portfolio Website
 
 Welcome to Muhammad Salman's Portfolio! This repository contains the content and details of my personal website showcasing my skills and projects.
 
