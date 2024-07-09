@@ -38,7 +38,6 @@ Each project demonstrates my skills in various technologies and problem-solving 
 Feel free to reach out for inquiries, collaboration opportunities, or to discuss any programming-related matter. I'm eager to engage in meaningful conversations and contribute my expertise.
 
 - **Email:** chmsalman199@gmail.com
-- **Phone:** +92 337 7534199
 
 ## License
 
