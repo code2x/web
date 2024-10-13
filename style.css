@@ -242,7 +242,7 @@ nav {
 
 .featured-text-btn>.blue-btn {
     background: var(--first-color);
-    color: var(--color-white);
+    /* color: var(--color-white); */
 }
 
 .featured-text-btn>.blue-btn:hover {
@@ -485,64 +485,112 @@ h3 {
     border-radius: 5px;
 }
 
-/* ----- PROJECTS BOX ----- */
-.project-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+/* ----- PROJECTS SECTION ----- */
+#projects {
+    margin: 50px 0;
 }
 
+#projects h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(62, 68, 177);
+    margin-bottom: 30px;
+}
+
+/* Project Container */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between project boxes */
+}
+
+/* Project Box */
 .project-box {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 30%;
+    width: 30%; /* Each project box takes up 30% width */
     height: 250px;
+    background-color: var(--box-bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
     overflow: hidden;
 }
 
+/* Icons and Text Inside Project Box */
 .project-box i {
     font-size: 50px;
     color: #00B5E7;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+}
+
+.project-box h3 {
+    font-size: 18px;
+    color: var(--text-color-main);
+    margin-bottom: 10px;
 }
 
 .project-box label {
     font-size: 15px;
-    color: white;
+    color: var(--text-color-second);
 }
 
-.project-box::after,
-.contact-info::after {
+/* Hover Effect */
+.project-box::after {
     content: "";
     position: absolute;
     bottom: -100%;
-    background-color: var(--first-color);
+    left: 0;
     width: 100%;
     height: 100%;
-    transition: 1s;
-    z-index: 1;
+    background-color: var(--first-color);
+    transition: bottom 0.5s ease;
+    z-index: 0;
 }
 
-.project-box:hover.project-box::after,
-.contact-info:hover.contact-info::after {
-    bottom: 0;
+.project-box:hover::after {
+    bottom: 0; /* Slide in background on hover */
     transform: scale(1.31);
     border-radius: 95%;
 }
 
-.project-box:hover.project-box i,
-.project-box:hover.project-box>h3,
-.project-box:hover.project-box>label {
-    color: var(--color-white);
-    z-index: 2;
+.project-box:hover {
+    transform: translateY(-5px); /* Lift the box slightly on hover */
+    box-shadow: rgba(17, 12, 46, 0.25) 0px 48px 120px 0px; /* Intensify shadow on hover */
 }
+
+.project-box:hover i,
+.project-box:hover h3,
+.project-box:hover label {
+    color: white;
+    z-index: 1; /* Bring text and icons in front of the background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .project-box {
+        flex: 1 1 45%; /* Two project boxes per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-box {
+        flex: 1 1 100%; /* Full width for each project on small screens */
+    }
+}
+
+
+
+
 
 /* ----- CONTACT BOX ----- */
 .contact-info {
@@ -802,6 +850,7 @@ footer {
 
 }
 
+
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px) {
@@ -820,4 +869,410 @@ footer {
     .input-field {
         width: 100%;
     }
+}
+
+
+
+
+.featured-text .featured-text-card span{
+    font: bold;
+    color: #000303 !important;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+/* Dark Theme */
+
+body.dark-theme {
+    background-color: black;
+    color: white;
+}
+body.dark-theme #header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+body.dark-theme .scroll-btn{
+    background-color: rgb(62, 68, 177);
+    color: white;
+}
+
+body.dark-theme .btn{
+    background-color: rgb(62, 68, 177);
+    color: white;
+}
+
+body.dark-theme .about-info h3{
+    /* background-color: rgb(62, 68, 177); */
+    color: rgb(0, 0, 0);
+}
+
+body.dark-theme .about-info p{
+    /* background-color: rgb(62, 68, 177); */
+    color: rgb(0, 0, 0);
+}
+
+
+
+body.dark-theme .featured-image .image{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255); /* Add a white border */
+    border-radius: 110px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: some padding for better spacing */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Optional: shadow for depth */
+}
+
+
+
+
+/* Set text color for specific elements in dark theme */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme p, 
+body.dark-theme a{
+    color: white; /* Ensure text is white for these elements */
+}
+
+/* You can add more selectors as needed, or use a more general approach */
+body.dark-theme * {
+    color: white; /* Applies white color to all text */
+}
+.container .dark-theme{
+    background-color: black;
+    color: #000303;
+}
+
+/* Image styles to keep them unchanged */
+.icon img {
+    height: 20px;
+    width: 20px;
+}
+
+/* If you want to ensure the icon itself is not affected by the dark theme */
+body.dark-theme .featured-image {
+    background-color: transparent; /* Example if there is any background */
+}
+
+
+body .theme-toggle{
+
+    margin-left: 30px;
+    color: #000303;
+    background-color:transparent;
+} 
+
+body.light-theme .theme-toggle {
+    background-color: transparent;  
+    color: rgb(0, 0, 0);
+}
+
+body.dark-theme .theme-toggle {
+    background-color: transparent;  
+    color: rgb(255, 255, 255);
+}
+
+
+.theme-toggle button {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white;       /* White border */
+    border-radius: 50%;            /* Circular shape */
+    width: 40px;                   /* Width of the button */
+    height: 40px;                  /* Height of the button */
+    display: flex;                 /* Center icon */
+    align-items: center;           /* Center icon vertically */
+    justify-content: center;       /* Center icon horizontally */
+    cursor: pointer;               /* Pointer cursor on hover */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.theme-toggle button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background change on hover */
+    border-color: rgba(0, 0, 0, 0.7);     /* Change border color on hover */
+}
+
+body.dark-theme.theme-toggle button:hover{
+    color: #ffffff;
+}
+
+.theme-toggle button:focus {
+    outline: none; /* Remove outline */
+}
+
+
+
+.featured-text-info p{
+    text-align: justify;
+}
+
+
+
+/* ----- EXPERIENCE SECTION ----- */
+.experience-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.experience-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color-second);
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    background: var(--second-color);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--color-white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px -5px, rgba(0, 0, 0, 0.3) 0px 10px 20px -5px;
+    transition: transform 0.3s;
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+}
+
+.experience-item .position {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.experience-item .duration {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.experience-item .company {
+    font-size: 16px;
+}
+
+
+/* #skills .skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+#experience h2{
+    text-align: center;
+    color: rgb(62, 68, 177);
+}
+
+#skills h2{
+    text-align: center;
+    color: rgb(62, 68, 177);
+}
+
+
+
+/* ----- Skills Section ----- */
+body.dark-theme .skills .skills-box ul{
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+
+.skills-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    width: 100%;
+    background: rgba(62, 68, 177, 0.1); /* Subtle background color change */
+    box-shadow: 0 0 15px rgb(62, 68, 177); /* Add a glow effect */
+    border-radius: 20px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color-second);
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.skill-item {
+    font-size: 14px;
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px -5px, rgba(0, 0, 0, 0.3) 0px 10px 20px -5px;
+    transition: transform 0.3s;
+    transform: scale(1.05); /* Slightly increase the size */
+}
+
+#skills .skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#skills .skills-box {
+    flex: 1;
+    min-width: 300px; /* Ensures the boxes wrap below a certain width */
+    padding: 20px;
+    background-color: rgba(62, 68, 177, 0.1); /* Subtle background color change */
+    box-shadow: 0 0 15px rgb(62, 68, 177); /* Add a glow effect */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#skills .skills-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-top-color: rgb(62, 68, 177);
+    border-left-color: rgb(62, 68, 177);
+    animation: moveAround 4s linear infinite;
+    box-sizing: border-box;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 0;
+        left: 0;
+        border-top-color: rgb(62, 68, 177);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: rgb(62, 68, 177);
+    }
+    25% {
+        top: 0;
+        left: 100%;
+        border-top-color: rgb(62, 68, 177);
+        border-right-color: rgb(62, 68, 177);
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+        border-top-color: transparent;
+        border-right-color: rgb(62, 68, 177);
+        border-bottom-color: rgb(62, 68, 177);
+        border-left-color: transparent;
+    }
+    75% {
+        top: 100%;
+        left: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: rgb(62, 68, 177);
+        border-left-color: rgb(62, 68, 177);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        border-top-color: rgb(62, 68, 177);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: rgb(62, 68, 177);
+    }
+}
+
+#skills .skills-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--text-color-second);
+}
+
+#skills .skills-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills .skills-box ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    #skills .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.skills .skills-box h3{
+    color: white;
+    text-align: center;
+}
+
+
+.dark-theme .skills .skills-box h3{
+    color: white !important;
+    text-align: center;
+}
+
+.light-theme .skills .skills-box ul {
+    list-style-type: disc !important;
+    padding-left: 20px !important; /* Ensure there's some space for the bullets to appear */
+}
+
+.dark-theme .skills .skills-box ul {
+    list-style-type: disc !important;
+    padding-left: 20px !important; /* Ensure there's some space for the bullets to appear */
+}
+
+.experience-box ul {
+    list-style-type: disc;
+    padding-left: 40px; /* Ensure there's some space for the bullets to appear */
+}
+
+
+
+
+.row .col .contact-info h2{
+    color: white !important;
 }

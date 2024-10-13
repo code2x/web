@@ -32,7 +32,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 let typingEffect = new Typed(".typedText", {
-    strings: ["Software Engineer", "Programmer", "Data Architect", "Game Developer", "Algorithmic Analyst"],
+    strings: ["SQA Engineer", "Manual QA", "Automation Engineer", "QA Lead", "QA Analyst"],
     loop: true,
     typeSpeed: 100,
     backSpeed: 80,
@@ -184,3 +184,58 @@ function downloadCV() {
     window.location.href = googleFormUrl;
 }
 
+
+// const themeToggle = document.getElementById('theme-toggle');
+
+// themeToggle.addEventListener('click', () => {
+//     document.body.classList.toggle('dark-theme');
+//     document.body.classList.toggle('light-theme');
+
+//     // Save the user's preference in localStorage
+//     const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+//     localStorage.setItem('theme', currentTheme);
+// });
+
+// // Apply the saved theme on page load
+// window.onload = () => {
+//     const savedTheme = localStorage.getItem('theme');
+//     if (savedTheme) {
+//         document.body.classList.add(savedTheme === 'dark' ? 'dark-theme' : 'light-theme');
+//     } else {
+//         document.body.classList.add('light-theme'); // Default theme
+//     }
+// };
+
+
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
+
+    // Change icon based on current theme
+    if (document.body.classList.contains('dark-theme')) {
+        themeIcon.classList.remove('uil-sun'); // Remove sun icon
+        themeIcon.classList.add('uil-moon');   // Add moon icon
+    } else {
+        themeIcon.classList.remove('uil-moon'); // Remove moon icon
+        themeIcon.classList.add('uil-sun');      // Add sun icon
+    }
+
+    // Save the user's preference in localStorage
+    const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+    localStorage.setItem('theme', currentTheme);
+});
+
+// Apply the saved theme on page load
+window.onload = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme === 'dark' ? 'dark-theme' : 'light-theme');
+        // Set the icon based on the saved theme
+        themeIcon.classList.add(savedTheme === 'dark' ? 'uil-moon' : 'uil-sun');
+    } else {
+        document.body.classList.add('light-theme'); // Default theme
+    }
+};

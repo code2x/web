@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Welcome to Muhammad Salman's Portfolio! This repository contains the content and details of my personal website showcasing my skills and projects.
+Welcome to Farwa Ramzan's Portfolio! This repository contains the content and details of my personal website showcasing my skills and projects.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ Welcome to Muhammad Salman's Portfolio! This repository contains the content and
 
 ## Introduction
 
-I'm Muhammad Salman, a Software Engineer specializing in Front-End Development, Desktop Application Development, and expertise in Data Structures and Algorithms. I thrive in dynamic environments, enjoy problem-solving challenges, and stay updated with emerging technologies.
+I'm Farwa Ramzan, a Software Engineer specializing in Front-End Development, Desktop Application Development, and expertise in Data Structures and Algorithms. I thrive in dynamic environments, enjoy problem-solving challenges, and stay updated with emerging technologies.
 
 ## Skills
 
@@ -41,11 +41,11 @@ Feel free to reach out for inquiries, collaboration opportunities, or to discuss
 
 ## License
 
-Copyright © Muhammad Salman. All rights reserved.
+Copyright © Farwa Ramzan. All rights reserved.
 
 ---
 
-Thank you for visiting my portfolio! For more information, visit [Muhammad Salman's Website](https://salmandeveloperz.github.io/portfolio/).
+Thank you for visiting my portfolio! For more information, visit [Farwa Ramzan's Website](https://salmandeveloperz.github.io/portfolio/).
 
 ---
 
