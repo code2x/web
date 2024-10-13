@@ -60,6 +60,8 @@
                         </button>
                     </li>
 
+                    
+
                     <!-- <li class="nav_list">
                         <a href="#contact" class="nav-link">Contact</a>
                         <div class="circle"></div>
@@ -349,7 +351,7 @@
 
                     </style>
                     
-                    <div class="form-control">
+                    <!-- <div class="form-control">
                         <form action="https://forms.gle/y8rwgGpwayBnQxWp7" method="POST">
                             <div class="form-inputs">
                                 <input type="text" name="entry.123456789" class="input-field" placeholder="Name">
@@ -364,7 +366,78 @@
 
 
                         </form>
+                    </div> -->
+
+
+                    <!-- <div class="form-control">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSckH2y2g84jFU-eCMndRnkcCxqHitQFe4d0mW1_00rHxQdv3w/viewform?usp=sf_link" method="POST" target="_blank" onsubmit="return validateForm()">
+                            <div class="form-inputs">
+                                <input type="text" id="name" name="entry.2005620554" class="input-field" placeholder="Name" required>
+                                <input type="email" id="email" name="entry.1045781291" class="input-field" placeholder="Email" required>
+                            </div>
+                            <div class="text-area">
+                                <textarea id="message" name="entry.839337160" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </form>
+                    </div> -->
+                    
+
+                    <!-- <div class="form-control">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSckH2y2g84jFU-eCMndRnkcCxqHitQFe4d0mW1_00rHxQdv3w/viewform?usp=sf_link" method="POST" onsubmit="return validateForm()">
+                            <div class="form-inputs">
+                                <input type="text" id="name" name="name" class="input-field" placeholder="Name" required>
+                                <input type="email" id="email" name="email" class="input-field" placeholder="Email" required>
+                            </div>
+                            <div class="text-area">
+                                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </form>
+                    </div> -->
+                    
+                    <div class="form-control">
+                        <form action="https://formspree.io/f/myzyyepe" method="POST" onsubmit="return validateForm()">
+                            <div class="form-inputs">
+                                <input type="text" id="name" name="name" class="input-field" placeholder="Name" required>
+                                <input type="email" id="email" name="email" class="input-field" placeholder="Email" required>
+                            </div>
+                            <div class="text-area">
+                                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </form>
                     </div>
+                    
+                    <script>
+                    function validateForm() {
+                        let name = document.getElementById('name').value;
+                        let email = document.getElementById('email').value;
+                        let message = document.getElementById('message').value;
+                    
+                        if (name === "" || email === "" || message === "") {
+                            alert("All fields must be filled out");
+                            return false; // Prevent form submission
+                        }
+                    
+                        let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                        if (!emailPattern.test(email)) {
+                            alert("Please enter a valid email address");
+                            return false; // Prevent form submission
+                        }
+
+                        
+                    
+                        return true; // Allow form submission
+                    }
+                    </script>
+                    
 
 
                 </div>
