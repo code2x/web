@@ -185,108 +185,41 @@ function downloadCV() {
 }
 
 
-// const themeToggle = document.getElementById('theme-toggle');
-
-// themeToggle.addEventListener('click', () => {
-//     document.body.classList.toggle('dark-theme');
-//     document.body.classList.toggle('light-theme');
-
-//     // Save the user's preference in localStorage
-//     const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-//     localStorage.setItem('theme', currentTheme);
-// });
-
-// // Apply the saved theme on page load
-// window.onload = () => {
-//     const savedTheme = localStorage.getItem('theme');
-//     if (savedTheme) {
-//         document.body.classList.add(savedTheme === 'dark' ? 'dark-theme' : 'light-theme');
-//     } else {
-//         document.body.classList.add('light-theme'); // Default theme
-//     }
-// };
-
-
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
-
-    // Change icon based on current theme
+// Function to update the icon based on the current theme
+function updateThemeIcon() {
     if (document.body.classList.contains('dark-theme')) {
         themeIcon.classList.remove('uil-sun'); // Remove sun icon
         themeIcon.classList.add('uil-moon');   // Add moon icon
     } else {
         themeIcon.classList.remove('uil-moon'); // Remove moon icon
-        themeIcon.classList.add('uil-sun');      // Add sun icon
+        themeIcon.classList.add('uil-sun');     // Add sun icon
     }
+}
+
+// Apply the saved theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme === 'dark' ? 'dark-theme' : 'light-theme');
+    } else {
+        document.body.classList.add('light-theme'); // Default theme
+    }
+    updateThemeIcon(); // Set the correct icon on page load
+});
+
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
 
     // Save the user's preference in localStorage
     const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
     localStorage.setItem('theme', currentTheme);
+
+    // Update the icon
+    updateThemeIcon();
 });
 
-// Apply the saved theme on page load
-window.onload = () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.body.classList.add(savedTheme === 'dark' ? 'dark-theme' : 'light-theme');
-        // Set the icon based on the saved theme
-        themeIcon.classList.add(savedTheme === 'dark' ? 'uil-moon' : 'uil-sun');
-    } else {
-        document.body.classList.add('light-theme'); // Default theme
-    }
-};
-
-
-
-
-{/* <script> */}
-// function validateForm() {
-//     let name = document.getElementById('name').value;
-//     let email = document.getElementById('email').value;
-//     let message = document.getElementById('message').value;
-
-//     if (name == "" || email == "" || message == "") {
-//         alert("All fields must be filled out");
-//         return false;
-//     }
-
-//     let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-//     if (!emailPattern.test(email)) {
-//         alert("Please enter a valid email address");
-//         return false;
-//     }
-
-//     return true;
-// }
-// </script>
-
-
-
-{/* <script> */}
-    // Set default theme to dark
-    document.addEventListener("DOMContentLoaded", function() {
-        document.body.classList.add('dark-theme'); // Set dark theme by default
-
-        // Toggle theme on button click
-        const toggleButton = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-
-        toggleButton.addEventListener('click', function() {
-            document.body.classList.toggle('dark-theme');
-            document.body.classList.toggle('light-theme');
-
-            // Update the icon based on the current theme
-            if (document.body.classList.contains('dark-theme')) {
-                themeIcon.classList.remove('uil-sun');
-                themeIcon.classList.add('uil-moon'); // Change icon to moon for dark theme
-            } else {
-                themeIcon.classList.remove('uil-moon');
-                themeIcon.classList.add('uil-sun'); // Change icon to sun for light theme
-            }
-        });
-    });
-{/* </script> */}
