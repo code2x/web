@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Website
 
 Welcome to Farwa Ramzan's Portfolio! This repository contains the content and details of my personal website showcasing my skills and projects.
@@ -49,3 +50,6 @@ Thank you for visiting my portfolio! For more information, visit [Farwa Ramzan's
 
 ---
 
+=======
+# web
+>>>>>>> 548203c4a2e1d8a168c3668edad3d4c1e30b51ae
